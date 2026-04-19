@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="it" data-lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thomas Faccin — Full Stack Developer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-logo">T<span>.</span>F</div>
+    <ul class="nav-links">
+      <li><a href="#bio" data-i18n="nav_bio">Bio</a></li>
+      <li><a href="#skills" data-i18n="nav_skills">Competenze</a></li>
+      <li><a href="#projects" data-i18n="nav_projects">Progetti</a></li>
+      <li><a href="#contacts" data-i18n="nav_contacts">Contatti</a></li>
+    </ul>
+    <div class="lang-switcher">
+      <button class="lang-btn active" onclick="setLang('it')">IT</button>
+      <button class="lang-btn" onclick="setLang('de')">DE</button>
+      <button class="lang-btn" onclick="setLang('en')">EN</button>
+    </div>
+  </nav>
+
+  <div class="wrapper">
+
+    <!-- HERO -->
+    <section class="hero fade-in">
+      <div class="hero-inner">
+        <div>
+          <div class="hero-status" data-i18n="hero_status">Disponibile per nuove opportunità</div>
+          <h1>Thomas<br><span class="highlight">Faccin.</span></h1>
+          <p class="hero-sub" data-i18n="hero_sub">Full Stack Web Developer. Costruisco applicazioni web moderne, scalabili e orientate al risultato.</p>
+          <div class="hero-cta">
+            <a href="#contacts" class="btn btn-primary" data-i18n="hero_cta1">Contattami →</a>
+            <a href="#projects" class="btn btn-ghost" data-i18n="hero_cta2">Vedi i progetti</a>
+          </div>
+        </div>
+        <div class="avatar-wrap">
+          <div class="avatar-ring"></div>
+          <!-- Sostituisci con la tua foto -->
+          <img class="avatar" src="./image/IMG_6535.jpeg" alt="Foto profilo Thomas Faccin">
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- BIO -->
+    <section id="bio" class="fade-in">
+      <div class="section-label" data-i18n="bio_label">Chi sono</div>
+      <p class="bio-text" data-i18n="bio_text">Sono un Full Stack Web Developer appassionato di tecnologia e sviluppo web. Ho costruito le mie competenze attraverso un percorso intensivo e pratico, lavorando su architetture reali e applicando metodologie Agile. Sono orientato al risultato, preciso e sempre in apprendimento continuo.</p>
+      <div class="bio-grid">
+        <div class="glass bio-card">
+          <div class="bio-card-label" data-i18n="bio_position">Posizione</div>
+          <div class="bio-card-value" data-i18n="bio_position_val">München 🇩🇪 — In sede, ibrido o da remoto</div>
+        </div>
+        <div class="glass bio-card">
+          <div class="bio-card-label" data-i18n="bio_education">Formazione</div>
+          <div class="bio-card-value">Aulab Hackademy</div>
+        </div>
+        <div class="glass bio-card">
+          <div class="bio-card-label" data-i18n="bio_spec">Specializzazione</div>
+          <div class="bio-card-value">PHP · Laravel · JavaScript · MySQL</div>
+        </div>
+        <div class="glass bio-card">
+          <div class="bio-card-label" data-i18n="bio_status">Status</div>
+          <div class="bio-card-value" data-i18n="bio_status_val">🟡 Aperto a nuove collaborazioni</div>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- SKILLS -->
+    <section id="skills" class="fade-in">
+      <div class="section-label" data-i18n="skills_label">Competenze</div>
+      <div class="skills-grid">
+        <div class="glass skill-card">
+          <div class="skill-cat" data-i18n="skills_backend">Backend</div>
+          <div class="skill-title">Server & DB</div>
+          <div class="skill-tags">
+            <span class="tag">PHP 8.4</span>
+            <span class="tag">Laravel</span>
+            <span class="tag">MySQL</span>
+            <span class="tag">REST API</span>
+            <span class="tag">OOP</span>
+          </div>
+        </div>
+        <div class="glass skill-card">
+          <div class="skill-cat" data-i18n="skills_frontend">Frontend</div>
+          <div class="skill-title" data-i18n="skills_frontend_title">Interfacce</div>
+          <div class="skill-tags">
+            <span class="tag">JavaScript</span>
+            <span class="tag">HTML5</span>
+            <span class="tag">CSS3</span>
+            <span class="tag">Bootstrap</span>
+            <span class="tag">Livewire</span>
+          </div>
+        </div>
+        <div class="glass skill-card">
+          <div class="skill-cat">Tools</div>
+          <div class="skill-title">Workflow</div>
+          <div class="skill-tags">
+            <span class="tag">Git</span>
+            <span class="tag">GitHub</span>
+            <span class="tag">Agile</span>
+            <span class="tag">Vite</span>
+          </div>
+        </div>
+        <div class="glass skill-card">
+          <div class="skill-cat">E-commerce</div>
+          <div class="skill-title" data-i18n="skills_payments">Pagamenti</div>
+          <div class="skill-tags">
+            <span class="tag">Stripe</span>
+            <span class="tag">Mailtrap</span>
+          </div>
+        </div>
+        <div class="glass skill-card">
+          <div class="skill-cat">AI & Cloud</div>
+          <div class="skill-title" data-i18n="skills_ai">Intelligenza</div>
+          <div class="skill-tags">
+            <span class="tag">Google Vision</span>
+            <span class="tag">Face Detection</span>
+            <span class="tag">Safe Search</span>
+          </div>
+        </div>
+        <div class="glass skill-card">
+          <div class="skill-cat" data-i18n="skills_learning">In apprendimento</div>
+          <div class="skill-title" data-i18n="skills_next">Prossimi</div>
+          <div class="skill-tags">
+            <span class="tag">Java</span>
+            <span class="tag">Enterprise</span>
+            <span class="tag" data-i18n="skills_scalable">Architetture scalabili</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="fade-in">
+      <div class="section-label" data-i18n="projects_label">Progetti</div>
+      <div class="projects-list">
+        <div class="glass project-card">
+          <div>
+            <div class="project-year" data-i18n="project1_year">Progetto Finale · 2026</div>
+            <div class="project-title">Presto.it</div>
+            <p class="project-desc" data-i18n="project1_desc">Marketplace per comprare e vendere articoli di ogni tipo. Gli annunci vengono moderati da revisori umani supportati da Google Vision AI, che oscura automaticamente i volti, rileva contenuti espliciti tramite Safe Search e genera etichette descrittive. I pagamenti sono integrati con Stripe e le notifiche vengono inviate via email con Mailtrap.</p>
+            <div class="project-stack">
+              <span class="tag">Laravel 13</span>
+              <span class="tag">PHP 8.4</span>
+              <span class="tag">MySQL</span>
+              <span class="tag">Stripe</span>
+              <span class="tag">Google Vision</span>
+              <span class="tag">Livewire 3</span>
+              <span class="tag">Bootstrap 5.3</span>
+            </div>
+          </div>
+          <a href="https://github.com/ThomasFaccin95/Final_Project_Presto_it_Aulab.git" class="project-link" title="Vedi progetto">↗</a>
+        </div>
+        <div class="glass project-card">
+          <div>
+            <div class="project-year" data-i18n="project2_year">Progetto · 2025</div>
+            <div class="project-title">Laravel API</div>
+            <p class="project-desc" data-i18n="project2_desc">Progetto che illustra la costruzione di un'API RESTful con Laravel, seguendo il pattern MVC per una codebase pulita e manutenibile. Include CRUD completo, gestione delle relazioni tramite Eloquent ORM e validazione delle rotte per API sicure e affidabili.</p>
+            <div class="project-stack">
+              <span class="tag">Laravel</span>
+              <span class="tag">MySQL</span>
+              <span class="tag">Eloquent ORM</span>
+              <span class="tag">REST API</span>
+            </div>
+          </div>
+          <a href="https://github.com/ThomasFaccin95/Laravel_API.git" target="_blank" class="project-link" title="Vedi su GitHub">↗</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- CONTACTS -->
+    <section id="contacts" class="fade-in">
+      <div class="section-label" data-i18n="contacts_label">Contatti</div>
+      <h2 style="font-family:var(--font-display);font-size:clamp(2rem,5vw,3.5rem);font-weight:800;letter-spacing:-0.03em;margin-bottom:0.75rem;">
+        <span data-i18n="contacts_title">Parliamoci</span><span style="color:var(--gold)">.</span>
+      </h2>
+      <p style="color:var(--text-muted);font-size:1rem;line-height:1.7;margin-bottom:2rem;max-width:480px;" data-i18n="contacts_sub">
+        Sono aperto a nuove opportunità, collaborazioni freelance e progetti interessanti nel mondo dello sviluppo web.
+      </p>
+      <div class="contacts-grid">
+        <a href="mailto:thomas.faccin95@gmail.com" class="glass contact-card">
+          <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+          <div class="contact-type">Email</div>
+          <div class="contact-value">thomas.faccin95@gmail.com</div>
+        </a>
+        <a href="https://github.com/ThomasFaccin95" target="_blank" class="glass contact-card">
+          <div class="contact-icon"><i class="fa-brands fa-github"></i></div>
+          <div class="contact-type">GitHub</div>
+          <div class="contact-value">ThomasFaccin95</div>
+        </a>
+        <a href="https://www.linkedin.com/in/thomas-faccin-a36350403/" target="_blank" class="glass contact-card">
+          <div class="contact-icon"><i class="fa-brands fa-linkedin"></i></div>
+          <div class="contact-type">LinkedIn</div>
+          <div class="contact-value">thomas-faccin</div>
+        </a>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    © 2026 <span>Thomas Faccin</span> — <span data-i18n="footer_role">Full Stack Web Developer</span>
+  </footer>
+
+  <script src="main.js"></script>
+
+</body>
+</html>
