@@ -565,7 +565,10 @@ footer span {
 
     .hero-inner { grid-template-columns: 1fr; justify-items: center; }
     
-  .avatar-wrap { display: flex; justify-content: center; margin-bottom: 2rem; }
+   .avatar-wrap {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 2rem;
     }
 
     .skills-grid {
