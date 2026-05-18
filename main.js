@@ -1,5 +1,42 @@
 // ─── TRANSLATIONS ───────────────────────────────────────────────────────────
 const translations = {
+  en: {
+    nav_bio: 'About',
+    nav_skills: 'Skills',
+    nav_projects: 'Projects',
+    nav_contacts: 'Contact',
+    hero_status: 'Available for new opportunities',
+    hero_sub: 'Full Stack Web Developer. I build modern, scalable web applications focused on results.',
+    hero_cta1: 'Contact me →',
+    hero_cta2: 'View projects',
+    bio_label: 'About me',
+    bio_text: 'I am a Full Stack Web Developer passionate about technology and web development. I built my skills through an intensive, hands-on program, working on real architectures and applying Agile methodologies. I am result-oriented, precise, and always continuously learning.',
+    bio_position: 'Location',
+    bio_position_val: 'Munich 🇩🇪 — On-site, hybrid or remote',
+    bio_education: 'Education',
+    bio_spec: 'Specialization',
+    bio_status: 'Status',
+    bio_status_val: '🟡 Open to new collaborations',
+    skills_label: 'Skills',
+    skills_backend: 'Backend',
+    skills_frontend: 'Frontend',
+    skills_frontend_title: 'Interfaces',
+    skills_payments: 'Payments',
+    skills_ai: 'Intelligence',
+    skills_learning: 'Learning',
+    skills_next: 'Upcoming',
+    skills_scalable: 'Scalable architectures',
+    projects_label: 'Projects',
+    project1_year: 'Final Project · 2026',
+    project1_desc: 'Marketplace for buying and selling all kinds of items. Listings are moderated by human reviewers supported by Google Vision AI, which automatically blurs faces, detects explicit content via Safe Search, and generates descriptive labels. Payments are integrated with Stripe and notifications are sent by email via Mailtrap.',
+    project2_year: 'Project · 2025',
+    project2_desc: 'Project illustrating the construction of a RESTful API with Laravel, following the MVC pattern for a clean and maintainable codebase. Includes full CRUD operations, relationship management via Eloquent ORM, and route validation for secure and reliable APIs.',
+    contacts_label: 'Contact',
+    contacts_title: "Let's talk",
+    contacts_sub: 'I am open to new job opportunities, freelance collaborations, and interesting projects in web development.',
+    footer_role: 'Full Stack Web Developer',
+  },
+
   it: {
     nav_bio: 'Bio',
     nav_skills: 'Competenze',
@@ -74,43 +111,6 @@ const translations = {
     footer_role: 'Full Stack Web Developer',
   },
 
-  en: {
-    nav_bio: 'About',
-    nav_skills: 'Skills',
-    nav_projects: 'Projects',
-    nav_contacts: 'Contact',
-    hero_status: 'Available for new opportunities',
-    hero_sub: 'Full Stack Web Developer. I build modern, scalable web applications focused on results.',
-    hero_cta1: 'Contact me →',
-    hero_cta2: 'View projects',
-    bio_label: 'About me',
-    bio_text: 'I am a Full Stack Web Developer passionate about technology and web development. I built my skills through an intensive, hands-on program, working on real architectures and applying Agile methodologies. I am result-oriented, precise, and always continuously learning.',
-    bio_position: 'Location',
-    bio_position_val: 'Munich 🇩🇪 — On-site, hybrid or remote',
-    bio_education: 'Education',
-    bio_spec: 'Specialization',
-    bio_status: 'Status',
-    bio_status_val: '🟡 Open to new collaborations',
-    skills_label: 'Skills',
-    skills_backend: 'Backend',
-    skills_frontend: 'Frontend',
-    skills_frontend_title: 'Interfaces',
-    skills_payments: 'Payments',
-    skills_ai: 'Intelligence',
-    skills_learning: 'Learning',
-    skills_next: 'Upcoming',
-    skills_scalable: 'Scalable architectures',
-    projects_label: 'Projects',
-    project1_year: 'Final Project · 2026',
-    project1_desc: 'Marketplace for buying and selling all kinds of items. Listings are moderated by human reviewers supported by Google Vision AI, which automatically blurs faces, detects explicit content via Safe Search, and generates descriptive labels. Payments are integrated with Stripe and notifications are sent by email via Mailtrap.',
-    project2_year: 'Project · 2025',
-    project2_desc: 'Project illustrating the construction of a RESTful API with Laravel, following the MVC pattern for a clean and maintainable codebase. Includes full CRUD operations, relationship management via Eloquent ORM, and route validation for secure and reliable APIs.',
-    contacts_label: 'Contact',
-    contacts_title: "Let's talk",
-    contacts_sub: 'I am open to new job opportunities, freelance collaborations, and interesting projects in web development.',
-    footer_role: 'Full Stack Web Developer',
-  },
-  
   es: {
     nav_bio: 'Sobre mí',
     nav_skills: 'Habilidades',
@@ -150,20 +150,43 @@ const translations = {
 };
 
 // ─── LANGUAGE SWITCHER ───────────────────────────────────────────────────────
+const langFlags = { it: '🇮🇹', de: '🇩🇪', en: '🇬🇧', es: '🇪🇸' };
+
+function toggleLangMenu() {
+  const toggle = document.getElementById('langToggle');
+  const dropdown = document.getElementById('langDropdown');
+  const isOpen = dropdown.classList.contains('open');
+  dropdown.classList.toggle('open', !isOpen);
+  toggle.classList.toggle('open', !isOpen);
+}
+
 function setLang(lang) {
   document.documentElement.setAttribute('data-lang', lang);
 
-  document.querySelectorAll('[data-i18n]').forEach(el => {
-    const key = el.getAttribute('data-i18n');
+  document.querySelectorAll('[langSwit]').forEach(el => {
+    const key = el.getAttribute('langSwit');
     if (translations[lang] && translations[lang][key]) {
       el.textContent = translations[lang][key];
     }
   });
 
-  document.querySelectorAll('.lang-btn').forEach(btn => {
-    btn.classList.toggle('active', btn.textContent.toLowerCase() === lang);
+  document.querySelectorAll('.lang-option').forEach(btn => {
+    btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
   });
+
+  document.getElementById('langCurrent').textContent = langFlags[lang] || '🌐';
+
+  document.getElementById('langDropdown').classList.remove('open');
+  document.getElementById('langToggle').classList.remove('open');
 }
+
+document.addEventListener('click', (e) => {
+  const switcher = document.querySelector('.lang-switcher');
+  if (!switcher.contains(e.target)) {
+    document.getElementById('langDropdown').classList.remove('open');
+    document.getElementById('langToggle').classList.remove('open');
+  }
+});
 
 // ─── FADE IN ON SCROLL ───────────────────────────────────────────────────────
 const observer = new IntersectionObserver((entries) => {
@@ -176,3 +199,8 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.1 });
 
 document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+
+// ─── Application default language ————————————————————————————————————
+const defaultLang = document.documentElement.getAttribute('data-lang') || 'it';
+setLang(defaultLang);

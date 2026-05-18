@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="it" data-lang="it">
+<html lang="en" data-lang="en">
 
 <head>
   <meta charset="UTF-8" />
@@ -18,16 +18,23 @@
   <nav>
     <div class="nav-logo">T<span>.</span>F</div>
     <ul class="nav-links">
-      <li><a href="#bio" data-i18n="nav_bio">Bio</a></li>
-      <li><a href="#skills" data-i18n="nav_skills">Competenze</a></li>
-      <li><a href="#projects" data-i18n="nav_projects">Progetti</a></li>
-      <li><a href="#contacts" data-i18n="nav_contacts">Contatti</a></li>
+      <li><a href="#bio" langSwit="nav_bio">Bio</a></li>
+      <li><a href="#skills" langSwit="nav_skills">Competenze</a></li>
+      <li><a href="#projects" langSwit="nav_projects">Progetti</a></li>
+      <li><a href="#contacts" langSwit="nav_contacts">Contatti</a></li>
     </ul>
     <div class="lang-switcher">
-      <button class="lang-btn active" onclick="setLang('it')">IT</button>
-      <button class="lang-btn" onclick="setLang('de')">DE</button>
-      <button class="lang-btn" onclick="setLang('en')">EN</button>
-      <button class="lang-btn" onclick="setLang('es')">ES</button>
+      <button class="lang-toggle" id="langToggle" onclick="toggleLangMenu()" aria-label="Cambia lingua">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        <span class="lang-current" id="langCurrent">🇬🇧</span>
+        <svg class="lang-chevron" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <div class="lang-dropdown" id="langDropdown">
+        <button class="lang-option" onclick="setLang('it')" data-lang="it">🇮🇹</button>
+        <button class="lang-option" onclick="setLang('de')" data-lang="de">🇩🇪</button>
+        <button class="lang-option active" onclick="setLang('en')" data-lang="en">🇬🇧</button>
+        <button class="lang-option" onclick="setLang('es')" data-lang="es">🇪🇸</button>
+      </div>
     </div>
   </nav>
 
@@ -38,13 +45,13 @@
       <div class="hero-inner">
 
         <div>
-          <div class="hero-status" data-i18n="hero_status">Disponibile per nuove opportunità</div>
+          <div class="hero-status" langSwit="hero_status">Disponibile per nuove opportunità</div>
           <h1>Thomas<br><span class="highlight">Faccin.</span></h1>
-          <p class="hero-sub" data-i18n="hero_sub">Full Stack Web Developer. Costruisco applicazioni web moderne,
+          <p class="hero-sub" langSwit="hero_sub">Full Stack Web Developer. Costruisco applicazioni web moderne,
             scalabili e orientate al risultato.</p>
           <div class="hero-cta">
-            <a href="#contacts" class="btn btn-primary" data-i18n="hero_cta1">Contattami →</a>
-            <a href="#projects" class="btn btn-ghost" data-i18n="hero_cta2">Vedi i progetti</a>
+            <a href="#contacts" class="btn btn-primary" langSwit="hero_cta1">Contattami →</a>
+            <a href="#projects" class="btn btn-ghost" langSwit="hero_cta2">Vedi i progetti</a>
           </div>
         </div>
 
@@ -61,26 +68,26 @@
 
     <!-- BIO -->
     <section id="bio" class="fade-in">
-      <div class="section-label" data-i18n="bio_label">Chi sono</div>
-      <p class="bio-text" data-i18n="bio_text">Sono un Full Stack Web Developer appassionato di tecnologia e sviluppo
+      <div class="section-label" langSwit="bio_label">Chi sono</div>
+      <p class="bio-text" langSwit="bio_text">Sono un Full Stack Web Developer appassionato di tecnologia e sviluppo
         web. Ho costruito le mie competenze attraverso un percorso intensivo e pratico, lavorando su architetture reali
         e applicando metodologie Agile. Sono orientato al risultato, preciso e sempre in apprendimento continuo.</p>
       <div class="bio-grid">
         <div class="glass bio-card">
-          <div class="bio-card-label" data-i18n="bio_position">Posizione</div>
-          <div class="bio-card-value" data-i18n="bio_position_val">München 🇩🇪 — In sede, ibrido o da remoto</div>
+          <div class="bio-card-label" langSwit="bio_position">Posizione</div>
+          <div class="bio-card-value" langSwit="bio_position_val">München 🇩🇪 — In sede, ibrido o da remoto</div>
         </div>
         <div class="glass bio-card">
-          <div class="bio-card-label" data-i18n="bio_education">Formazione</div>
+          <div class="bio-card-label" langSwit="bio_education">Formazione</div>
           <div class="bio-card-value">Hackademy Full Stack - Aulab</div>
         </div>
         <div class="glass bio-card">
-          <div class="bio-card-label" data-i18n="bio_spec">Certificazione</div>
+          <div class="bio-card-label" langSwit="bio_spec">Certificazione</div>
           <div class="bio-card-value"> Full Stack Web Developer ID:179686944 </div>
         </div>
         <div class="glass bio-card">
-          <div class="bio-card-label" data-i18n="bio_status">Status</div>
-          <div class="bio-card-value" data-i18n="bio_status_val">🟡 Aperto a nuove collaborazioni</div>
+          <div class="bio-card-label" langSwit="bio_status">Status</div>
+          <div class="bio-card-value" langSwit="bio_status_val">🟡 Aperto a nuove collaborazioni</div>
         </div>
       </div>
     </section>
@@ -89,10 +96,10 @@
 
     <!-- SKILLS -->
     <section id="skills" class="fade-in">
-      <div class="section-label" data-i18n="skills_label">Competenze</div>
+      <div class="section-label" langSwit="skills_label">Competenze</div>
       <div class="skills-grid">
         <div class="glass skill-card">
-          <div class="skill-cat" data-i18n="skills_backend">Backend</div>
+          <div class="skill-cat" langSwit="skills_backend">Backend</div>
           <div class="skill-title">Server & DB</div>
           <div class="skill-tags">
             <span class="tag">PHP 8.4</span>
@@ -103,8 +110,8 @@
           </div>
         </div>
         <div class="glass skill-card">
-          <div class="skill-cat" data-i18n="skills_frontend">Frontend</div>
-          <div class="skill-title" data-i18n="skills_frontend_title">Interfacce</div>
+          <div class="skill-cat" langSwit="skills_frontend">Frontend</div>
+          <div class="skill-title" langSwit="skills_frontend_title">Interfacce</div>
           <div class="skill-tags">
             <span class="tag">JavaScript</span>
             <span class="tag">HTML5</span>
@@ -125,7 +132,7 @@
         </div>
         <div class="glass skill-card">
           <div class="skill-cat">E-commerce</div>
-          <div class="skill-title" data-i18n="skills_payments">Pagamenti</div>
+          <div class="skill-title" langSwit="skills_payments">Pagamenti</div>
           <div class="skill-tags">
             <span class="tag">Stripe</span>
             <span class="tag">Mailtrap</span>
@@ -133,7 +140,7 @@
         </div>
         <div class="glass skill-card">
           <div class="skill-cat">AI & Cloud</div>
-          <div class="skill-title" data-i18n="skills_ai">Intelligenza</div>
+          <div class="skill-title" langSwit="skills_ai">Intelligenza</div>
           <div class="skill-tags">
             <span class="tag">Google Vision</span>
             <span class="tag">Face Detection</span>
@@ -141,8 +148,8 @@
           </div>
         </div>
         <div class="glass skill-card">
-          <div class="skill-cat" data-i18n="skills_learning">In apprendimento</div>
-          <div class="skill-title" data-i18n="skills_next">Prossimi</div>
+          <div class="skill-cat" langSwit="skills_learning">In apprendimento</div>
+          <div class="skill-title" langSwit="skills_next">Prossimi</div>
           <div class="skill-tags">
             <span class="tag">Java</span>
           </div>
@@ -154,13 +161,13 @@
 
     <!-- PROJECTS -->
     <section id="projects" class="fade-in">
-      <div class="section-label" data-i18n="projects_label">Progetti</div>
+      <div class="section-label" langSwit="projects_label">Progetti</div>
       <div class="projects-list">
         <div class="glass project-card">
           <div>
-            <div class="project-year" data-i18n="project1_year">Progetto Finale · 2026</div>
+            <div class="project-year" langSwit="project1_year">Progetto Finale · 2026</div>
             <div class="project-title">Presto.it</div>
-            <p class="project-desc" data-i18n="project1_desc">Marketplace per comprare e vendere articoli di ogni tipo.
+            <p class="project-desc" langSwit="project1_desc">Marketplace per comprare e vendere articoli di ogni tipo.
               Gli annunci vengono moderati da revisori umani supportati da Google Vision AI, che oscura automaticamente
               i volti, rileva contenuti espliciti tramite Safe Search e genera etichette descrittive. I pagamenti sono
               integrati con Stripe e le notifiche vengono inviate via email con Mailtrap.</p>
@@ -179,9 +186,9 @@
         </div>
         <div class="glass project-card">
           <div>
-            <div class="project-year" data-i18n="project2_year">Progetto · 2025</div>
+            <div class="project-year" langSwit="project2_year">Progetto · 2025</div>
             <div class="project-title">Laravel API</div>
-            <p class="project-desc" data-i18n="project2_desc">Progetto che illustra la costruzione di un'API RESTful con
+            <p class="project-desc" langSwit="project2_desc">Progetto che illustra la costruzione di un'API RESTful con
               Laravel, seguendo il pattern MVC per una codebase pulita e manutenibile. Include CRUD completo, gestione
               delle relazioni tramite Eloquent ORM e validazione delle rotte per API sicure e affidabili.</p>
             <div class="project-stack">
@@ -201,13 +208,13 @@
 
     <!-- CONTACTS -->
     <section id="contacts" class="fade-in">
-      <div class="section-label" data-i18n="contacts_label">Contatti</div>
+      <div class="section-label" langSwit="contacts_label">Contatti</div>
       <h2
         style="font-family:var(--font-display);font-size:clamp(2rem,5vw,3.5rem);font-weight:800;letter-spacing:-0.03em;margin-bottom:0.75rem;">
-        <span data-i18n="contacts_title">Parliamoci</span><span style="color:var(--gold)">.</span>
+        <span langSwit="contacts_title">Parliamoci</span><span style="color:var(--gold)">.</span>
       </h2>
       <p style="color:var(--text-muted);font-size:1rem;line-height:1.7;margin-bottom:2rem;max-width:480px;"
-        data-i18n="contacts_sub">
+        langSwit="contacts_sub">
         Sono aperto a nuove opportunità, collaborazioni freelance e progetti interessanti nel mondo dello sviluppo web.
       </p>
       <div class="contacts-grid">
@@ -233,7 +240,7 @@
 
   <!-- FOOTER -->
   <footer>
-    © 2026 <span>Thomas Faccin</span> — <span data-i18n="footer_role">Full Stack Web Developer</span>
+    © 2026 <span>Thomas Faccin</span> — <span langSwit="footer_role">Full Stack Web Developer</span>
   </footer>
 
   <script src="main.js"></script>
