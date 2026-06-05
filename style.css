@@ -267,18 +267,6 @@ section:first-of-type {
 }
 
 
-.btn-ghost-1 {
-  background: linear-gradient(to right, #F5C518, #000000);
-  color: #ffffff;
-  border: none;
-  transition: opacity 0.3s ease;
-}
-
-.btn-ghost-1:hover {
-  opacity: 0.8;
-  cursor: pointer;
-}
-
 /* AVATAR */
 .avatar-wrap {
     position: relative;
