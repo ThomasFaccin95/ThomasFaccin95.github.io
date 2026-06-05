@@ -368,6 +368,17 @@ section:first-of-type {
     font-weight: 400;
 }
 
+.bio-card-value 1 {
+  color: #F5C518;
+  text-decoration: none;
+}
+
+.bio-card-value 1:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+
 /* SKILLS */
 .skills-grid {
     display: grid;
