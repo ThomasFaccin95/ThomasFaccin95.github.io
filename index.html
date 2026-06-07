@@ -25,9 +25,17 @@
     </ul>
     <div class="lang-switcher">
       <button class="lang-toggle" id="langToggle" onclick="toggleLangMenu()" aria-label="Cambia lingua">
-        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10" />
+          <line x1="2" y1="12" x2="22" y2="12" />
+          <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+        </svg>
         <span class="lang-current" id="langCurrent">🇬🇧</span>
-        <svg class="lang-chevron" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        <svg class="lang-chevron" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"
+          fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="6 9 12 15 18 9" />
+        </svg>
       </button>
       <div class="lang-dropdown" id="langDropdown">
         <button class="lang-option" onclick="setLang('it')" data-lang="it">🇮🇹</button>
@@ -51,14 +59,16 @@
             scalabili e orientate al risultato.</p>
           <div class="hero-cta">
             <a href="#contacts" class="btn btn-primary" langSwit="hero_cta1">Contattami →</a>
-            <a href="#projects" class="btn btn-primary" langSwit="hero_cta2">Vedi i progetti</a>
-            <a href="./pdf/Thomas_Faccin_CV.pdf" class="btn btn-ghost" langSwit="hero_cta3">View my CV</a>
+            <a href="#projects" class="btn btn-primary" langSwit="hero_cta2">Vedi i progetti →</a>
+            <a href="./pdf/Thomas_Faccin_CV.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-ghost"
+              langSwit="hero_cta3">View my CV</a>
           </div>
         </div>
 
         <div class="avatar-wrap">
           <div class="avatar-ring"></div>
-          <img class="avatar" src="https://res.cloudinary.com/dt1ym2vfx/image/upload/v1777817035/IMG_6535_rviudy_yxmmiz.jpg"
+          <img class="avatar"
+            src="https://res.cloudinary.com/dt1ym2vfx/image/upload/v1777817035/IMG_6535_rviudy_yxmmiz.jpg"
             alt="Foto profilo Thomas Faccin">
         </div>
 
@@ -74,18 +84,26 @@
         web. Ho costruito le mie competenze attraverso un percorso intensivo e pratico, lavorando su architetture reali
         e applicando metodologie Agile. Sono orientato al risultato, preciso e sempre in apprendimento continuo.</p>
       <div class="bio-grid">
-        <div class="glass bio-card">
-          <div class="bio-card-label" langSwit="bio_position">Posizione</div>
-          <div class="bio-card-value" langSwit="bio_position_val">München 🇩🇪 — In sede, ibrido o da remoto</div>
-        </div>
+        <a class="no-line" target="_blank"
+          href="https://www.google.com/maps/place/Monaco+di+Baviera/@48.155022,11.3769778,11z/data=!3m1!4b1!4m6!3m5!1s0x479e75f9a38c5fd9:0x10cb84a7db1987d!8m2!3d48.1351253!4d11.5819805!16s%2Fm%2F02h6_6p?entry=ttu&g_ep=EgoyMDI2MDYwMS4wIKXMDSoASAFQAw%3D%3D">
+          <div class="glass bio-card">
+            <div class="bio-card-label" langSwit="bio_position">Posizione</div>
+            <div class="bio-card-value" langSwit="bio_position_val">München 🇩🇪 — In sede, ibrido o da remoto</div>
+          </div>
+        </a>
+        <a class="no-line" target="_blank"
+          href="https://www.credential.net/bfaba59f-b033-4ae9-a0d4-1cb3eb6a74f8#acc.RwAelIcp">
         <div class="glass bio-card">
           <div class="bio-card-label" langSwit="bio_education">Formazione</div>
           <div class="bio-card-value">Hackademy Full Stack - Aulab</div>
         </div>
-        <div class="glass bio-card">
-          <div class="bio-card-label" langSwit="bio_spec">Certificazione</div>
-          <div class="bio-card-value 1"><a href="https://www.credential.net/bfaba59f-b033-4ae9-a0d4-1cb3eb6a74f8#acc.RwAelIcp"> Full Stack Web Developer ID:179686944 </a></div>
-        </div>
+        <a class="no-line" target="_blank"
+          href="https://www.credential.net/bfaba59f-b033-4ae9-a0d4-1cb3eb6a74f8#acc.RwAelIcp">
+          <div class="glass bio-card">
+            <div class="bio-card-label" langSwit="bio_spec">Certificazione</div>
+            <div class="bio-card-value">Full Stack Web Developer ID:179686944</div>
+          </div>
+        </a>
         <div class="glass bio-card">
           <div class="bio-card-label" langSwit="bio_status">Status</div>
           <div class="bio-card-value" langSwit="bio_status_val">🟡 Aperto a nuove collaborazioni</div>

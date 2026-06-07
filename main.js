@@ -8,7 +8,7 @@ const translations = {
     hero_status: 'Available for new opportunities',
     hero_sub: 'Full Stack Web Developer. I build modern, scalable web applications focused on results.',
     hero_cta1: 'Contact me →',
-    hero_cta2: 'View projects',
+    hero_cta2: 'View projects →',
     hero_cta3: 'View my CV',
     bio_label: 'About me',
     bio_text: 'I am a Full Stack Web Developer passionate about technology and web development. I built my skills through an intensive, hands-on program, working on real architectures and applying Agile methodologies. I am result-oriented, precise, and always continuously learning.',
